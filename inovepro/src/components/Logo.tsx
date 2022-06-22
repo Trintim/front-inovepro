@@ -1,0 +1,11 @@
+import Image from "../../node_modules/next/image"
+
+interface LogoProps{
+    className?: string
+}
+
+export default function Logo(props: LogoProps) {
+    return (
+        <Image className={props.className} src="/logoino.png" alt="Logo" width="64" height="64" />
+    )
+}
