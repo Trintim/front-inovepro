@@ -6,6 +6,6 @@ interface LogoProps{
 
 export default function Logo(props: LogoProps) {
     return (
-        <Image className={props.className} src="/logoino.png" alt="Logo" width="64" height="64" />
+        <Image className={props.className} src="/img/logoino.png" alt="Logo" width="64" height="64"/>
     )
 }
