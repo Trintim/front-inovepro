@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from "react";
 import Link from "../../node_modules/next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
@@ -13,6 +14,7 @@ export default function Header() {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   const navigation = [
     "Ínicio",
@@ -35,22 +37,22 @@ export default function Header() {
           <div className="col-start-1 col-end-2 flex items-center">
             <Logo className="h-8 w-auto" />
           </div>
-          <ul className="col-start-3 col-end-9 flex items-center justify-center">
+          <ul className="col-start-3 col-end-9 hidden lg:flex items-center justify-center">
             {navigation.map((item, index) => (
               <LinkScroll
                 key={index}
                 href="/"
                 activeClass="active"
-                to={`"${item}"`}
+                to={item}
                 spy={true}
                 smooth={true}
                 duration={1000}
                 onSetActive={() => {
-                  setActiveLink(`"${item}"`);
+                  setActiveLink({ item });
                 }}
                 className={
                   "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                  (activeLink === "about"
+                  (activeLink === { item }
                     ? " text-rose-500 animation-active "
                     : " text-gray-200 hover:text-rose-500 a")
                 }
@@ -59,7 +61,7 @@ export default function Header() {
               </LinkScroll>
             ))}
           </ul>
-          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
+          <div className="col-start-10 col-end-12 hidden lg:flex font-medium justify-end items-center">
             <ButtonNav>Contato</ButtonNav>
           </div>
         </nav>
