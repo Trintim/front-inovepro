@@ -1,6 +1,7 @@
 import Head from "../../node_modules/next/head";
 import Layout from "../components/Layout";
 
+
 export default function Home() {
   return (
     <>

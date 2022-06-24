@@ -1,7 +1,7 @@
-export const MenuIcon = (tamanho = 6) => (
+export const MenuIcon = (tam = 6) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${tamanho} w-${tamanho}`}
+    className={`h-${tam} w-${tam}`}
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -15,10 +15,10 @@ export const MenuIcon = (tamanho = 6) => (
   </svg>
 );
 
-export const CloseIcon = (tamanho = 6) => (
+export const CloseIcon = (tam = 6) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${tamanho} w-${tamanho}`}
+    className={`h-${tam} w-${tam}`}
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
