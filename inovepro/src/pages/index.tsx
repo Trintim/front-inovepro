@@ -14,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/img/logoino.png" />
       </Head>
       <Layout />
+
     </>
   );
 }
