@@ -1,5 +1,11 @@
-import { FaceIcon, InstaIcon, LinkdinIcon, MailIcon, MapIcon, PhoneIcon, PinterestIcon } from "./icons/index";
+import { MailIcon, MapIcon, PhoneIcon } from "./icons/index";
 import LogoFooter from "./LogoFooter";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+} from "react-icons/fa";
 
 export default function Footer(){
  return (
@@ -41,18 +47,18 @@ export default function Footer(){
              </li>
            </ul>
            <h4 className="text-rose-600 text-2xl py-2">Nossas redes sociais</h4>
-           <div className="flex">
+           <div className="flex gap-4">
              <a href="#" className="mr-4">
-               {FaceIcon(6, "text-white hover:text-rose-600")}
+               <FaFacebookF className="text-gray-200 hover:text-rose-600 text-xl" />
              </a>
              <a href="#" className="mx-4">
-               {InstaIcon(6, "text-gray-200 hover:text-rose-600")}
+               <FaInstagram className="text-gray-200 hover:text-rose-600 text-xl" />
              </a>
              <a href="#" className="mx-4 text-gray-200">
-               {LinkdinIcon(6, " hover:text-rose-600")}
+               <FaLinkedinIn className="text-gray-200 hover:text-rose-600 text-xl" />
              </a>
              <a href="#" className="mx-4 text-gray-200">
-               {PinterestIcon(6, "text-gray-200 hover:text-rose-600")}
+               <FaPinterestP className="text-gray-200 hover:text-rose-600 text-xl" />
              </a>
            </div>
          </div>
