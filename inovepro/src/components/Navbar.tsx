@@ -24,7 +24,7 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState(null);
   return (
     <>
-      <div className="min-h-full mt-8 px-5 lg:mt-0 lg:px-0">
+      <div className="min-h-full mt-8 px-5 lg:mt-0 lg:px-0 fixed top-0 bottom-0 right-0 left-0 z-30">
         <Disclosure as="nav" className="bg-zinc-900">
           {({ open }) => (
             <>
