@@ -1,33 +1,52 @@
 import { Slide } from 'react-slideshow-image'
 import "react-slideshow-image/dist/styles.css";
+import ButtonBanner from './ButtonBanner';
 import ButtonNav from './ButtonNav';
+import Logo from './Logo';
 
 const slideImages = [
   {
     url: "img/slide1.png",
-    Title: "Slide 1",
+    Title: "Edificando ideias, construindo o Futuro",
   },
   {
     url: "img/slide2.png",
-    Title: "Slide 2",
+    Title: "Seja leve e releve",
   },
   {
     url: "img/slide3.png",
-    Title: "Slide 3",
+    Title: "Abstraia a mente quando estiver com medo",
   },
 ];
 
 export default function Hero() {
   return (
     <div className="slide-container relative overflow-hidden h-screen w-full object-scale-down">
-      <Slide>
+      <Slide className="">
         {slideImages.map((slideImage, index) => (
-          <div className="each-slide" key={index}>
+          <div
+            className="each-slide before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:bg-gray-800/20"
+            key={index}
+          >
             <div
               className="bg-cover bg-center h-screen flex justify-center items-center"
-              style={{ backgroundImage: `url(${slideImage.url})` }}
+              style={{
+                backgroundImage: `url(${slideImage.url})`,
+              }}
             >
-              <span className="">{slideImage.Title}</span>
+              <div className="flex z-20">
+                <div className="flex flex-col text-gray-200 items-center justify-center ">
+                  <div className="p-2">
+                    <Logo width={200} height={200} />
+                  </div>
+                  <div className="mx-3 mb-7 px-10 text-3xl font-semibold lg:text-5xl">
+                    <h2 className="text-center">{slideImage.Title}</h2>
+                  </div>
+                  <div className="py-5">
+                    <ButtonBanner>Saiba Mais</ButtonBanner>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}

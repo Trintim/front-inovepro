@@ -10,7 +10,7 @@ interface LogoProps {
 export default function Logo(props: LogoProps) {
   return (
     <Image
-      src="/img/logoino.png"
+      src="/img/Logo.png"
       alt="Logo"
       width={props.width}
       height={props.height}
