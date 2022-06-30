@@ -35,11 +35,11 @@ export default function Hero() {
               }}
             >
               <div className="flex z-20">
-                <div className="flex flex-col text-gray-200 items-center justify-center ">
+                <div className="flex flex-col box-content w-[350px] lg:w-[650px] text-gray-200 items-center justify-center ">
                   <div className="p-2">
-                    <Logo width={200} height={200} />
+                    <Logo height={125} width={192} />
                   </div>
-                  <div className="mx-3 mb-7 px-10 text-3xl font-semibold lg:text-5xl">
+                  <div className="mx-3 mt-7 mb-7 text-3xl font-base lg:text-5xl box-content">
                     <h2 className="text-center">{slideImage.Title}</h2>
                   </div>
                   <div className="py-5">

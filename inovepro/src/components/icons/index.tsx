@@ -85,3 +85,5 @@ export const HeartIcon = (tam = 6) => (
   </svg>
 );
 
+
+
